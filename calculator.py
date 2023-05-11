@@ -15,6 +15,17 @@ output_text = Entry(calcu, font=("helvetica", 30, "bold"), textvariable=input_va
 output_text.grid(columnspan=4)
 
 # Buttons 7, 8, 9, +
+button_7 = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="7")
+button_7.grid(row=1, column=0)
+
+button_8 = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="8")
+button_8.grid(row=1, column=1)
+
+button_9 = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="9")
+button_9.grid(row=1, column=2)
+
+button_plus = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="+")
+button_plus.grid(row=1, column=3)
 
 # Buttons 4, 5, 6, -
 
