@@ -31,6 +31,8 @@ def button_equal():
         output_text.config(fg="red", justify=CENTER)
         error_display = "Syntax Error"
         input_value.set(error_display)
+    
+    popup_window()
 
 # Create the window for the calculator
 calcu = Tk()
@@ -96,6 +98,17 @@ button_div = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "b
 button_div.grid(row=4, column=3)
 
 # Create a popup window for another calculation
+# def popup_window to open a new window
+def popup_window():
+    global popup
+    popup = Toplevel(calcu)
+    popup.title("Calculator - 2023")
+    popup.geometry("400x200")
+    popup.config(bg="light pink") 
+    
+    popup_label = Label(popup, text="Would you like to try again?", bg="light pink", fg="white",
+                        font=("helvetica", 12, "bold"))
+    popup_label.pack(pady=10)
 
 # Create a popup window to exit the app
 
