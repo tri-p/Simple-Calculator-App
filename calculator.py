@@ -104,7 +104,7 @@ def choice(option):
         button_clear()
         popup.destroy()
     else:
-        calcu.destroy()
+        popup_thanks()
 
 # def popup_window to open a new window
 def popup_window():
@@ -126,6 +126,17 @@ def popup_window():
     no_button.pack(pady=15)
 
 # Create a popup window to exit the app
+# def popup_thanks to open new window with thank you message
+def popup_thanks():
+    global thanks
+    thanks = Toplevel()
+    thanks.title("Calculator - 2023")
+    thanks.geometry("400x200")
+    thanks.config(bg="light pink")
+
+    thanks_label = Label(thanks, text="Thank you!", bg="light pink", fg="white",
+                        font=("helvetica", 20, "bold"))
+    thanks_label.pack(pady=50)
 
 # ===== start =====
 calcu.mainloop()
