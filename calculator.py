@@ -137,6 +137,13 @@ def popup_thanks():
     thanks_label = Label(thanks, text="Thank you!", bg="light pink", fg="white",
                         font=("helvetica", 20, "bold"))
     thanks_label.pack(pady=50)
+    
+    # def exit_calcu for the exit button to work and exit the app
+    def exit_calcu():
+        calcu.destroy()
+
+    exit_button = Button(thanks, bd=5, fg="black", font=("helvetica", 12, "bold"), text="Exit", command=exit_calcu)
+    exit_button.pack(pady=1, padx=1)
 
 # ===== start =====
 calcu.mainloop()
