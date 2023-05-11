@@ -98,6 +98,14 @@ button_div = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "b
 button_div.grid(row=4, column=3)
 
 # Create a popup window for another calculation
+# def choice(option) for the "yes" and "no" buttons to work
+def choice(option):
+    if option == "yes":
+        button_clear()
+        popup.destroy()
+    else:
+        calcu.destroy()
+
 # def popup_window to open a new window
 def popup_window():
     global popup
@@ -111,10 +119,10 @@ def popup_window():
     popup_label.pack(pady=10)
 
     # yes and no buttons to try again or exit the app
-    yes_button = Button(popup, bd=5, fg="black", font=("helvetica", 12, "bold"), text="Yes")
+    yes_button = Button(popup, bd=5, fg="black", font=("helvetica", 12, "bold"), text="Yes", command=lambda: choice("yes"))
     yes_button.pack(pady=20)
     
-    no_button = Button(popup, bd=5, fg="black", font=("helvetica", 12, "bold"), text="No")
+    no_button = Button(popup, bd=5, fg="black", font=("helvetica", 12, "bold"), text="No", command=lambda: choice("no"))
     no_button.pack(pady=15)
 
 # Create a popup window to exit the app
