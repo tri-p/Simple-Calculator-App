@@ -54,6 +54,17 @@ button_times = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, 
 button_times.grid(row=3, column=3)
 
 # Buttons C, 0, =, /
+button_c = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="C")
+button_c.grid(row=4, column=0)
+
+button_0 = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="0")
+button_0.grid(row=4, column=1)
+
+button_equal = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="=")
+button_equal.grid(row=4, column=2)
+
+button_div = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="/")
+button_div.grid(row=4, column=3)
 
 # Create a popup window for another calculation
 
