@@ -8,6 +8,11 @@ calcu = Tk()
 calcu.title("Calculator - 2023")
 
 # Display the numbers and operation
+operation = ""
+input_value = StringVar()
+output_text = Entry(calcu, font=("helvetica", 30, "bold"), textvariable=input_value, bd=30, insertwidth=3,
+                    bg="light pink", justify=RIGHT)
+output_text.grid(columnspan=4)
 
 # Buttons 7, 8, 9, +
 
