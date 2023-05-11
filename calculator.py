@@ -1,3 +1,5 @@
+# PABUNA, KATRINA B. 
+
 # Import tkinter GUI
 from tkinter import *
 
