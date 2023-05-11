@@ -41,6 +41,17 @@ button_minus = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, 
 button_minus.grid(row=2, column=3)
 
 # Buttons 1, 2, 3, *
+button_1 = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="1")
+button_1.grid(row=3, column=0)
+
+button_2 = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="2")
+button_2.grid(row=3, column=1)
+
+button_3 = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="3")
+button_3.grid(row=3, column=2)
+
+button_times = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="*")
+button_times.grid(row=3, column=3)
 
 # Buttons C, 0, =, /
 
