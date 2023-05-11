@@ -8,6 +8,12 @@ def button_func(number):
     operation = operation + str(number)
     input_value.set(operation)
 
+# def button_clear for the clear button to work
+def button_clear():
+    global operation
+    operation = ""
+    input_value.set("")
+
 # Create the window for the calculator
 calcu = Tk()
 calcu.title("Calculator - 2023")
@@ -59,7 +65,7 @@ button_times = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, 
 button_times.grid(row=3, column=3)
 
 # Buttons C, 0, =, /
-button_c = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="C")
+button_c = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="C", command=button_clear)
 button_c.grid(row=4, column=0)
 
 button_0 = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="0", command=lambda: button_func(0))
