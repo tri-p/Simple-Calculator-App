@@ -13,6 +13,24 @@ def button_clear():
     global operation
     operation = ""
     input_value.set("")
+    output_text.config(fg="black", justify=RIGHT)
+
+# def button_equal to evaluate the input
+def button_equal():
+
+    try:
+        global operation
+        equal = str(eval(operation))
+        input_value.set(equal)
+        operation = ""
+    except ZeroDivisionError:
+        output_text.config(fg="red", justify=CENTER)
+        error_display = "Math Error"
+        input_value.set(error_display)
+    except SyntaxError:
+        output_text.config(fg="red", justify=CENTER)
+        error_display = "Syntax Error"
+        input_value.set(error_display)
 
 # Create the window for the calculator
 calcu = Tk()
@@ -71,7 +89,7 @@ button_c.grid(row=4, column=0)
 button_0 = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="0", command=lambda: button_func(0))
 button_0.grid(row=4, column=1)
 
-button_equal = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="=")
+button_equal = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="=", command=button_equal)
 button_equal.grid(row=4, column=2)
 
 button_div = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="/", command=lambda: button_func("/"))
