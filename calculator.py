@@ -28,6 +28,17 @@ button_plus = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "
 button_plus.grid(row=1, column=3)
 
 # Buttons 4, 5, 6, -
+button_4 = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="4")
+button_4.grid(row=2, column=0)
+
+button_5 = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="5")
+button_5.grid(row=2, column=1)
+
+button_6 = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="6")
+button_6.grid(row=2, column=2)
+
+button_minus = Button(calcu, padx=30, bd=10, fg="black", font=("helvetica", 30, "bold"), text="-")
+button_minus.grid(row=2, column=3)
 
 # Buttons 1, 2, 3, *
 
