@@ -110,6 +110,13 @@ def popup_window():
                         font=("helvetica", 12, "bold"))
     popup_label.pack(pady=10)
 
+    # yes and no buttons to try again or exit the app
+    yes_button = Button(popup, bd=5, fg="black", font=("helvetica", 12, "bold"), text="Yes")
+    yes_button.pack(pady=20)
+    
+    no_button = Button(popup, bd=5, fg="black", font=("helvetica", 12, "bold"), text="No")
+    no_button.pack(pady=15)
+
 # Create a popup window to exit the app
 
 # ===== start =====
